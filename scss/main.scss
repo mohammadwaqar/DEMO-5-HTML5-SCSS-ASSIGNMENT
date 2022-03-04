@@ -1,0 +1,351 @@
+*{padding: 0px;margin: 0px;box-sizing: border-box;}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;800&display=swap');
+html{font-size:12px;font-family: 'Montserrat', sans-serif;}
+// body{background-color: $color_warm_white;}
+// <<<#####>>>>>>>>********<<<#### VARIBLES ####>>>**********<<<<<<<<######>>>
+// *****scss variables open****
+$primary_color:#502274;
+$white_color:#ffffff;
+$dark_gray:#2c252c;
+$color_orange:#fe7701;
+$color_light_gray:#909495;
+$color_warm_white:#fffdfb;
+$color_light_gray_one:#eaeaea;
+// ****scss variable close****
+
+// <<<#####>>>>>>>>********<<<#### @MIXIN ####>>>**********<<<<<<<<######>>>
+
+// ****scss @mixin open****
+@mixin ptb_15{padding:1.25rem 0rem;}
+// ****scss @mixin close****
+
+// <<<#####>>>>>>>>********<<<#### HEADER ####>>>**********<<<<<<<<######>>>
+body{background-color: $color_warm_white;}
+// ****Header desktop css open****
+header{background-color:$primary_color; @include ptb_15;}
+    .search_global{background-color:$white_color;margin:0rem 3rem;padding: 0 0.5rem 0rem 2rem;border-radius:2.5rem;height:5rem;
+                    form{
+                    input{border:none;
+                    font-size: 1.1rem;
+                    &::placeholder{color: $color_light_gray;}
+                    &:focus{outline: none;}}
+                    label{font-size:1.2rem;color:$dark_gray;font-weight:600;}
+                    .mood{width:18rem !important;}
+                    button{background-color:$color_orange;border:none;border-radius:50%;width: 4.2rem;height:4.2rem;transition:.3s;
+                    &:hover{background-color: $primary_color;}}
+                     }
+                    }
+
+.right_nav_box{max-width:calc(100% - 690px);
+width: 100%;
+a{color: $white_color;text-decoration: none; font-weight:normal;font-size: 1.1rem;padding:0 1.2rem;}
+img{width:24px;height:24px;}
+}
+.profile_img img{width:24px; height:24px; border-radius: 50%;}  
+.user_select select{background-color:transparent;font-weight:normal !important;
+    color: $white_color;border:none;
+    option{background-color:$primary_color;border:none;}
+    &:focus{outline:none;}
+}                  
+.owl_sec{
+    padding:3rem 1rem 5rem;
+}
+// ****Header desktop css close****
+
+// ****Salider section css open****
+.owl-carousel.owl-loaded.owl-drag {
+    position: relative;
+}
+.left::after{
+    content: url(../images/icon/arrow_salider.png);
+    position:absolute;
+    top: 40%;
+    left: 2%;
+}
+.right::after{
+    content: url(../images/icon/arrow_salider.png);
+    position:absolute;
+    top: 40%;
+    right: 2%;
+    transform: rotate(180deg);
+}
+.owl-dots {
+    text-align: center;
+    padding-top: 15px;
+    position:absolute;
+    top: 80%;
+    left: 50%;
+    button.owl-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        display: inline-block;
+        background-color:$color_light_gray !important;
+        margin: 0 3px;
+        top: 80%;
+        &.active {
+            background-color:$white_color !important;
+          }
+      }
+      
+      &:focus {
+        outline: none;
+      }
+  }
+// ****Salider section css close****
+// <<<#####>>>>>>>>********<<<#######>>>**********<<<<<<<<######>>>
+// ****Event Category section css open****
+.commom_heding{
+    h2{font-size:2rem;
+        position: relative;
+        color: $dark_gray;
+    &::after{
+        position: absolute;
+        content:url(../images/icon/after.png);
+        left:0%;
+        top:75%;
+    }
+    }}
+    .view_all a{
+        text-transform: uppercase;
+        font-weight: 600;
+        text-decoration: none;
+        color: $color_orange;
+    }
+    .card_box_small{margin-top:4rem;margin-bottom:5rem;}
+    .card_category{
+        position: relative;
+        max-width: calc(93.5% / 5);
+        width: 100%;      
+        margin: 0 0.66rem;
+        background-color:$primary_color;
+        padding:2.3rem 2rem;
+        border-radius: .9rem;
+        h2{font-size:2rem;color:$white_color;font-weight: 500;padding-bottom: .8rem;}
+        p{font-size:.9rem;color:$white_color;padding-bottom:1.6rem;}
+        .card_bg_img{
+            position: absolute;
+            right: 4%;
+            top: 43%;
+        }
+    }
+// ****Event Category section css close****
+
+// ****Event Big card section css open****
+.card_big{
+    max-width: calc(96% / 4);
+    width: 100%;
+    margin: 3rem 0 5rem 1rem;
+}
+.card_big_img{
+    position: relative;
+    img{
+        width: 100%;
+    }
+    .heart_iocn{
+        position: absolute;
+        top:85%;
+        right:5%;
+        img{filter: drop-shadow(0px 3px 3.5px rgba(0,0,0,0.16));}
+    }
+}
+.card_big_text{
+    position: relative;
+    padding: 0rem 0.5rem;
+    span{
+        font-size: 1rem;
+        margin:.8rem 0;
+        display: inline-block;
+        color: $color_orange;
+        font-weight: 600;
+    }
+    h3{
+        font-size: 1.2rem;
+        max-width: 190px;
+        width: 100%;
+        line-height: 1.7rem;
+    }
+    h6{
+        padding: .7rem 0rem;
+        font-size: 1rem;
+        color: $color_light_gray;
+    }
+    .share_icon{
+        position: absolute;
+        top: 30%;
+        right: 9%;
+    }
+}
+
+// ****Event Big card section css close****
+
+// ****Featured Organizers card css open****
+.featured_card{
+    position: relative;
+    max-width: calc(94.5% / 5);
+    width: 100%;
+    margin: 3rem 0.56rem 5rem;
+    border:1px solid $color_light_gray_one;
+    border-radius: .8rem;
+    padding: 4.2rem 2.7rem 3.3rem;
+    background-color: $white_color;
+    &:hover{
+        filter: drop-shadow(0px 3px 3.5px rgba(0, 0, 0, 0.16));
+        transition: .4s;
+    }
+    
+    .cross_icon {
+        position: absolute;
+        right: 5%;
+        top: 6%;
+    }
+    
+    
+}
+.featured_text{
+    max-height:5rem;
+    margin-bottom: 5rem;
+    h5{
+        font-size: 1.3rem;
+        color: $dark_gray;
+        padding-top: 1rem;
+        padding-bottom:.8rem;
+    }
+    h6{
+        font-size: 1rem;
+        font-weight:500;
+        color: $color_light_gray;
+    }
+}
+.follow_btn a{
+    text-decoration: none;
+    text-transform: uppercase;
+     color:$color_orange;
+     border:1.5px solid $color_orange;
+     border-radius:2rem;
+     font-weight: 600;
+     padding:1rem 4.5rem;
+     display: inline-block;
+    }
+    
+
+// ****Featured Organizers card css close****
+
+// **** Footer  css oepn****
+footer{
+    background-color: $primary_color;
+    padding:6.2rem 0rem 12rem 0rem;
+}
+.footer_box_one{
+    max-width:370px;
+    width: 100%;
+    h3{
+        color: $white_color;
+        font-size:1.2rem;
+        padding:2rem 0rem ;
+    }
+}
+.follow_btn_join{
+    @extend .follow_btn;
+}
+.follow_btn_join a{
+    background-color: $color_orange;
+    color: $white_color;
+    padding:1rem 3.5rem;
+}
+.footer_ul{
+    ul{
+        list-style-type: none;
+        li{
+
+            padding:.4rem 0rem;
+        }
+        a{
+            text-decoration: none;
+            color: $white_color;
+            transition: .2s;
+            &:hover{
+                color: $color_orange;
+            }
+        }
+    }
+    .footer_address {
+        a{color: $white_color;}
+        span{ color: $white_color;}
+    }
+    .icon_add{padding-right: .8rem;}
+    .address_box{padding-bottom: .5rem;}
+}
+
+.footer_box_two{
+    max-width:calc(480px / 2);
+    width: 100%;
+ h3{ color: $white_color;
+    font-size:1.2rem;
+    padding:2rem 0rem ;}
+}
+.socail_iocn {
+    display:inline-block;
+    ul{
+        list-style-type: none;
+        li{ 
+            float: left;
+            padding-right: .8rem;
+        }
+    }
+}
+// **** Footer  css oepn****
+
+
+// **** mobile menu css open ****
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background-color: $primary_color;
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    top: 0%;
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    text-decoration: none;
+    color: $white_color;
+    display: block;
+    transition: 0.3s;
+    &:hover,&:focus{
+        color: $white_color;
+    }
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 15px;
+    right: 0%;
+    font-size: 60px;
+    z-index: 9999;
+  }
+  .menu_btn{
+      font-size:3rem;
+      color: $white_color;
+      cursor: pointer;
+  }
+  
+.mobile_menu_ul{
+    h3{
+        font-size: 1.8rem;
+    }
+    max-width: 100%;
+    @extend .footer_box_two;
+    a{font-size:1.5rem;}
+}
+// **** mobile menu css close ****
